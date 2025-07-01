@@ -1,13 +1,7 @@
 FROM n8nio/n8n:latest
-
-# Expose port
 EXPOSE 5678
-
-# Set environment variables
-ENV N8N_PORT=5678
-ENV N8N_PROTOCOL=http
-ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false
-
-# Use the original entrypoint and command
+USER root
+RUN apk add --no-cache tini
+USER node
 ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
 CMD ["n8n"]
