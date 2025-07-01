@@ -5,20 +5,3 @@ services:
     plan: free
     dockerfilePath: ./Dockerfile
     port: 5678
-    envVars:
-      - key: N8N_PORT
-        value: "5678"
-      - key: N8N_PROTOCOL
-        value: "https"
-      - key: DB_TYPE
-        value: "postgresdb"
-      - key: DB_POSTGRESDB_HOST
-        value: "YOUR_SUPABASE_HOST"
-      - key: DB_POSTGRESDB_DATABASE
-        value: "postgres"
-      - key: DB_POSTGRESDB_USER
-        value: "postgres"
-      - key: DB_POSTGRESDB_PASSWORD
-        value: "YOUR_SUPABASE_PASSWORD"
-      - key: N8N_ENCRYPTION_KEY
-        value: "your-secret-encryption-key-123"
