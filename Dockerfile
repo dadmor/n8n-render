@@ -1,8 +1,6 @@
-FROM node:16
+FROM node:18
 
-WORKDIR /app
-
-RUN npm install -g n8n@1.32.2
+RUN npm install -g n8n
 
 EXPOSE 5678
 
